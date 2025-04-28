@@ -1,0 +1,29 @@
+# Pipeline parameters
+
+# Data processing parameters
+categorical_columns:
+  - map
+  - team_name
+  - player_name
+  - weapon_preferred
+  - role
+
+numeric_columns:
+  - kills
+  - deaths
+  - assists
+  - headshot_percentage
+  - damage_per_round
+  - flash_assists
+  - kast_percentage
+  - utility_damage_per_round
+  - rating
+
+# EDA parameters
+visualization:
+  figure_size:
+    width: 12
+    height: 8
+  correlation:
+    min_correlation: 0.3
+    cmap: coolwarm

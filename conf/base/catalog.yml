@@ -1,0 +1,52 @@
+# Raw data
+raw_csgo_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/csgo_matches.csv
+  load_args:
+    parse_dates: true
+  save_args:
+    index: false
+
+# Processed data
+cleaned_csgo_data:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/cleaned_csgo_data.parquet
+
+featured_csgo_data:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/featured_csgo_data.parquet
+
+preprocessed_csgo_data:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/preprocessed_csgo_data.parquet
+
+# Analysis outputs
+numeric_summary_statistics:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/numeric_summary_statistics.csv
+
+categorical_summary_statistics:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/categorical_summary_statistics.csv
+
+correlation_matrix:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/correlation_matrix.csv
+
+# Visualizations
+distribution_plots:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/plots/distributions
+
+correlation_plot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/plots/correlation_heatmap.png
+
+categorical_plots:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/plots/categorical
+
+# Validation reports
+data_validation_report:
+  type: json.JSONDataset
+  filepath: data/08_reporting/data_validation_report.json

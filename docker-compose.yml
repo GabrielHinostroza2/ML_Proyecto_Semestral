@@ -1,0 +1,29 @@
+services:
+  kedro:
+    build: .
+    container_name: csgo_analysis
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    ports:
+      - "4141:4141"  # For Kedro Viz
+      - "8889:8888"  # Changed Jupyter port to 8889
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      - KEDRO_ENV=local
+    command: kedro run  # Default command, can be overridden
+
+  jupyter:
+    build: .
+    container_name: csgo_jupyter
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    ports:
+      - "8890:8888"  # Changed Jupyter port to 8890
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      - KEDRO_ENV=local
+    command: kedro jupyter notebook --allow-root --ip 0.0.0.0 --no-browser
