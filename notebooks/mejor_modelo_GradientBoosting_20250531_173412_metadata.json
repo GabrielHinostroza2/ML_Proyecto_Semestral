@@ -1,0 +1,20 @@
+{
+  "model_name": "GradientBoosting",
+  "best_params": {
+    "model__subsample": 0.9,
+    "model__n_estimators": 100,
+    "model__max_depth": 3,
+    "model__learning_rate": 0.1
+  },
+  "metrics": {
+    "mse": 0.07895887547164163,
+    "rmse": 0.2809962196750014,
+    "mae": 0.17405034278306095,
+    "r2": 0.8915968460329025,
+    "explained_variance": 0.8915969707188388
+  },
+  "cv_score": 0.8884759362564996,
+  "cv_std": 0.0028117753487004815,
+  "training_time": 17.651979684829712,
+  "timestamp": "2025-05-31T17:34:12.304377"
+}
