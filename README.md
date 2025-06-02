@@ -1,5 +1,11 @@
 # Análisis Competitivo de CS:GO mediante Machine Learning
 
+Equipo:
+Braihan Gonzalez
+Gabriel Hinostroza
+Luis Salamanca
+
+
 ## Introducción
 
 Este proyecto analiza datos de partidas profesionales de Counter-Strike: Global Offensive (CS:GO) para identificar patrones y factores determinantes del rendimiento en competiciones de alto nivel. Utilizamos técnicas avanzadas de machine learning para extraer insights valiosos que puedan ser aplicados tanto por jugadores profesionales como por desarrolladores.
