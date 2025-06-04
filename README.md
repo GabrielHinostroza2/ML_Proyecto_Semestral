@@ -1,8 +1,11 @@
 # Análisis Competitivo de CS:GO mediante Machine Learning
 
 Equipo:
+
 Braihan Gonzalez
+
 Gabriel Hinostroza
+
 Luis Salamanca
 
 
